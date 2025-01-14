@@ -171,7 +171,7 @@ class Stat extends Localizable {
     #manaMultiplier;
     get effortMultiplier() {
         if (this.#levelCalc !== this.statLevelExp.level) {
-            this.#effortMultiplier = 1 + this.statLevelExp.level / 100;
+            this.#effortMultiplier = 1 + this.statLevelExp.level / 100 + this.talentLevelExp.level / 100;
             this.#manaMultiplier = undefined;
             this.#levelCalc = this.statLevelExp.level;
         }
